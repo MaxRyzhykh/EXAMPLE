@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+import java.util.Scanner;
 public class HELLO {
 
     public static void main(String... args) {
@@ -48,7 +48,7 @@ public class HELLO {
 ////------------------------------------------------------------------
 //        int[] array = {1,2,3,4,5};
 //
-//        for (int i=0; i< array.length; i++) {
+//        for (int i = 0; i < array.length; i++) {
 //            System.out.print(array[i] + ", ");
 //        }
 ////------------------------------------------------------------------
@@ -78,6 +78,19 @@ public class HELLO {
 //        int d = (int) c;
 //        System.out.println(d);
 ////------------------------------------------------------------------
+        System.out.print("Введите неотрицательное целое число для вычисления факториала: ");
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
 
+        long factorial = 1;
+        for (int i = 1; i <= n;i++) {
+            factorial = factorial * i;
+        }
+        System.out.println("n! = " + factorial);
+        long backfactorial = factorial;
+        for (long j = 1; j != backfactorial; j++) {
+            backfactorial = backfactorial / j;
+        }
+        System.out.println("n от !n = " + backfactorial);
     }
 }
