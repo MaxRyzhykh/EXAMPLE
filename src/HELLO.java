@@ -78,19 +78,49 @@ public class HELLO {
 //        int d = (int) c;
 //        System.out.println(d);
 ////------------------------------------------------------------------
-        System.out.print("Введите неотрицательное целое число для вычисления факториала: ");
-        Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
+//        System.out.print("Введите неотрицательное целое число для вычисления факториала: ");
+//        Scanner scan = new Scanner(System.in);
+//        int n = scan.nextInt();
+//
+//        long factorial = 1;
+//        for (int i = 1; i <= n;i++) {
+//            factorial = factorial * i;
+//        }
+//        System.out.println("n! = " + factorial);
+//        long backfactorial = factorial;
+//        for (long j = 1; j != backfactorial; j++) {
+//            backfactorial = backfactorial / j;
+//        }
+//        System.out.println("n от !n = " + backfactorial);
+////===================================================================
+        ////класс java Person, создаём и создаём объекты этого класса ниже
+        Person person1 = new Person("Harry", "Potter", 17);
+//        person1.firstName = "Harry";
+//        person1.lastName = "Potter";
+//        person1.age = 17;
 
-        long factorial = 1;
-        for (int i = 1; i <= n;i++) {
-            factorial = factorial * i;
-        }
-        System.out.println("n! = " + factorial);
-        long backfactorial = factorial;
-        for (long j = 1; j != backfactorial; j++) {
-            backfactorial = backfactorial / j;
-        }
-        System.out.println("n от !n = " + backfactorial);
+//        System.out.println(person1.firstName + " " + person1.lastName + " " + person1.age);
+        Person person3 = person1; // делаем сылку на объект(данные так капировать нельза даже если обект 3 новый)
+        person3.firstName = "Tom";
+
+        person1.printPersonFullInfo(); // метод создан в классе для вывода
+
+        Person person2 = new Person("Volan", "de mort");
+//        person2.firstName = "Tom";
+//        person2.lastName = "Reddle";
+//        person2.age = 70;
+
+//        System.out.println(person2.firstName + " " + person2.lastName + " " + person2.age);
+//        person2.printPersonFullInfo();
+        System.out.println(person2.firstName + " " + person2.lastName + " " + person2.age);
+        String person1FullInfo = person1.getFullInfo( false);
+        System.out.println("Полная информация о человек: " + person1FullInfo);
+
+        Person person4 = new Person(person1);
+// Сравнение
+        System.out.println(person1.theSamePerson(person2));
+        System.out.println(person1.theSamePerson(person3));
+
+
     }
 }
