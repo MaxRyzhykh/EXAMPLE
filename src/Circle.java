@@ -1,3 +1,4 @@
+//example
 public class Circle extends Figure {
     protected double a;
 
