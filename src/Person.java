@@ -43,6 +43,6 @@ public class Person {
         return firstName.equals(person.firstName) &&
                 lastName.equals(person.lastName) &&
                 age == person.age;
-
     }
+
 }

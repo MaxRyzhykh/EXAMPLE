@@ -2,7 +2,20 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class HELLO {
 
-    public static void main(String... args) {
+	static void printArgs(String... args){
+		for(int i=0; i < args.length; i++){
+			System.out.println(args[i]);
+		}
+	}
+
+	static  int factorial(int number) {
+		if(number == 1) {
+			return 1;
+		}
+		return number * factorial(number - 1);
+	}
+
+	public static void main(String... args) {
 //        System.out.println("Hello World!");
 ////------------------------------------------------------------------
 //        int a=1;
@@ -93,34 +106,47 @@ public class HELLO {
 //        }
 //        System.out.println("n от !n = " + backfactorial);
 ////===================================================================
-        ////класс java Person, создаём и создаём объекты этого класса ниже
-        Person person1 = new Person("Harry", "Potter", 17);
+		////класс java Person, создаём и создаём объекты этого класса ниже
+//        Person person1 = new Person("Harry", "Potter", 17);
 //        person1.firstName = "Harry";
 //        person1.lastName = "Potter";
 //        person1.age = 17;
 
 //        System.out.println(person1.firstName + " " + person1.lastName + " " + person1.age);
-        Person person3 = person1; // делаем сылку на объект(данные так капировать нельза даже если обект 3 новый)
-        person3.firstName = "Tom";
+//        Person person3 = person1; // делаем сылку на объект(данные так капировать нельза даже если обект 3 новый)
+//        person3.firstName = "Tom";
 
-        person1.printPersonFullInfo(); // метод создан в классе для вывода
+//        person1.printPersonFullInfo(); // метод создан в классе для вывода
 
-        Person person2 = new Person("Volan", "de mort");
+//        Person person2 = new Person("Volan", "de mort");
 //        person2.firstName = "Tom";
 //        person2.lastName = "Reddle";
 //        person2.age = 70;
 
 //        System.out.println(person2.firstName + " " + person2.lastName + " " + person2.age);
 //        person2.printPersonFullInfo();
-        System.out.println(person2.firstName + " " + person2.lastName + " " + person2.age);
-        String person1FullInfo = person1.getFullInfo( false);
-        System.out.println("Полная информация о человек: " + person1FullInfo);
+//        System.out.println(person2.firstName + " " + person2.lastName + " " + person2.age);
+//        String person1FullInfo = person1.getFullInfo( false);
+//        System.out.println("Полная информация о человек: " + person1FullInfo);
 
-        Person person4 = new Person(person1);
+//        Person person4 = new Person(person1);
 // Сравнение
-        System.out.println(person1.theSamePerson(person2));
-        System.out.println(person1.theSamePerson(person3));
+//        System.out.println(person1.theSamePerson(person2));
+//        System.out.println(person1.theSamePerson(person3));
 
+		//    int ch = 123;
 
-    }
+		//   for (int i = 0; i < ch.l  )
+
+//        System.out.println(102 % 1001);
+
+		System.out.println(factorial(4));
+
+//        System.out.println(printArgs());
+
+//        Rectangle rectangle1 = new Rectangle(4, 3);
+//        System.out.println(rectangle1.area());
+//        System.out.println(rectangle1.perimeter());
+		
+	}
 }
